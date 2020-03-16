@@ -1,0 +1,36 @@
+ 
+version: 2
+
+models:
+    - name: teams
+      description: "Model representing unique teams and their member count"
+      columns:
+          - name: team
+            description: "Name of team"
+            tests:
+                - unique
+                - not_null
+          - name: member_count
+            description: "Number of members in a team"
+    - name: users
+      description: "Model representing the users"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+          - name: name
+            description: "Name of team"
+          - name: team
+            description: "Name of team"
+    - name: user_goals
+      description: "Model representing the weekly goals of each user"
+      columns:
+          - name: name
+            description: "User name"
+          - name: timestamp
+            description: "Date"
+          - name: hours
+            description: "Total hours for the task"
+          - name: project
+            description: "Project name"
+          - name: text
+            description: "Description"
